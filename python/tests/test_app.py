@@ -6,7 +6,7 @@ class TestApp:
     """
     Test class for the ApplicationWrapper class.
     """
-    def setup_method(self, method):
+    def setup_method(self):
         """
         Initializes the TestApp object.
         """
