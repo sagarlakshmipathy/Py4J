@@ -16,8 +16,8 @@ class ApplicationWrapper:
 
     """
     def __init__(self):
-        self.gateway = JavaGateway.launch_gateway(jarpath="/Users/sagarl/Downloads/py4j-0.10.9.7.jar",
-                                                  classpath="/Users/sagarl/learning/Py4J/target/Py4J-1.0-SNAPSHOT.jar")
+        self.gateway = JavaGateway.launch_gateway(jarpath="/path/to/py4j-0.10.9.7.jar",
+                                                  classpath="/path/to/Py4J-1.0-SNAPSHOT.jar")
         self.application = self.gateway.jvm.org.example.application.Application()
 
     def add(self, a, b):
