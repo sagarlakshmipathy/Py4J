@@ -30,7 +30,7 @@ from python.app import ApplicationWrapper
 wrapper = ApplicationWrapper()
 result = wrapper.subtract(2,1)
 
-result  # will output 1
+print(result)  # will output 1
 ```
 
 * In addition to the subtract method, you can access other Java objects and methods (native and custom) from Python. 
@@ -41,7 +41,7 @@ from python.app import ApplicationWrapper
 wrapper = ApplicationWrapper()
 result = wrapper.getArrayLength([1,2,3])
 
-result  # will output 3
+print(result)  # will output 3
 ```
 Note: Python doesn't have an equivalent data type for Java's `int[]`, so I've constructed a Java array from Python using Py4J. Refer to [this](https://github.com/sagarlakshmipathy/Py4J/blob/3fcda4718b837140317c889ef8c9bd86748bda2b/python/app.py#L30) code.
 
