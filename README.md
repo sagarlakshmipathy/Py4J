@@ -1,6 +1,11 @@
 # Py4J - A walkthrough
 This project is a simple implementation of [Py4J](https://www.py4j.org/index.html), a Python library that enables Python programs to dynamically access Java objects and methods. The goal of this project is to provide users with a guardrail to implement Py4J in their workflow.
 
+[![Packaging Status](https://github.com/sagarlakshmipathy/Py4J/actions/workflows/python-publish.yml/badge.svg)](https://github.com/sagarlakshmipathy/Py4J/actions/workflows/python-publish.yml)
+[![Generic badge](https://img.shields.io/badge/PyPI-Published-yellow.svg)](https://pypi.org/project/py4j-example/)
+[![Generic badge](https://img.shields.io/badge/release-v0.1.0-green.svg)](https://github.com/sagarlakshmipathy/Py4J/releases/tag/v0.1.0)
+[![Generic badge](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](https://github.com/sagarlakshmipathy/Py4J/blob/main/LICENSE)
+
 ## Getting Started
 To get started with Py4J, you will need to have the below in your machine. 
 * Java (Java 11 or above) - This project was tested with **Java 11**
