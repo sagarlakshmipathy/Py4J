@@ -45,6 +45,16 @@ result  # will output 3
 ```
 Note: Python doesn't have an equivalent data type for Java's `int[]`, so I've constructed a Java array from Python using Py4J. Refer to [this](https://github.com/sagarlakshmipathy/Py4J/blob/3fcda4718b837140317c889ef8c9bd86748bda2b/python/app.py#L30) code.
 
+## Extending the application
+You can extend the application by adding your own Java classes and methods.
+* Create a new Java class in the `src/main/java/org/example/` directory or modify the existing `Application.java` class
+* Add your custom methods to the class
+* Add unit test cases for the Java methods in the `src/test/java/org/example/` directory
+* Build the project using `mvn clean package`
+* Modify the `pyhton/app.py` file to add your custom methods
+* Add unit tests for your Python methods in the `python/tests/` directory
+* Run the tests using `python -m pytest` from the project root directory
+
 ## Contributing
 Contributions to this project are welcome. 
 If you have any suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
