@@ -10,17 +10,12 @@ You can find the installation instructions on their respective official websites
 
 Once you have Java and Python installed, you can proceed with the following steps:
 
-1. Download the latest Py4J jar in your local machine. You can find the latest version of the jar https://mvnrepository.com/artifact/net.sf.py4j/py4j
-2. Clone this repository to your local machine
+1. Download the latest Py4J jar in your local machine. You can find the latest version of the jar [here](https://mvnrepository.com/artifact/net.sf.py4j/py4j)
+2. Clone this repository in your local machine
 3. Open a terminal or command prompt and navigate to the project's root directory
 4. Build the project using `mvn clean package` or `mvn clean package -DskipTests`
 5. Start the Py4J GatewayServer in the foreground by executing `java -cp "/path/to/py4j.jar:target/Py4J-1.0-SNAPSHOT.jar" py4j.GatewayServer`
-6. Optional: If you don't want to start the gateway server process in foreground. You can also add the `py4j-jar` as `jarpath` and the `custom-jar` as `classpath` in `python/app.py` like below
-
-  ```
-  self.gateway = JavaGateway.launch_gateway(jarpath="/path/to/py4j-0.10.9.7.jar",
-                                            classpath="/path/to/Py4J-1.0-SNAPSHOT.jar")
-  ```
+6. Optional: If you don't want to start the gateway server process in foreground. You can also add the `py4j-jar` as `jarpath` and your application's `custom-jar` as `classpath` [here](https://github.com/sagarlakshmipathy/Py4J/blob/bfd6e78e6c987350a0fd5d576cbecb50eb3ad029/python/app.py#L19)
 
 ## Usage
 * From your terminal, open python
