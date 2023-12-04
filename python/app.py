@@ -1,4 +1,5 @@
 from py4j.java_gateway import JavaGateway
+from py4j.java_collections import ListConverter
 
 
 class ApplicationWrapper:
@@ -15,8 +16,8 @@ class ApplicationWrapper:
 
     """
     def __init__(self):
-        self.gateway = JavaGateway.launch_gateway(jarpath="/path/to/py4j.jar",
-                                                  classpath="/path/to/application.jar")
+        self.gateway = JavaGateway.launch_gateway(jarpath="/Users/sagarl/Downloads/py4j-0.10.9.7.jar",
+                                                  classpath="/Users/sagarl/learning/Py4J/target/Py4J-1.0-SNAPSHOT.jar")
         self.application = self.gateway.jvm.org.example.application.Application()
 
     def add(self, a, b):
@@ -24,3 +25,13 @@ class ApplicationWrapper:
 
     def subtract(self, a, b):
         return self.application.subtract(a, b)
+
+    def getArrayLength(self, lst):
+        java_array = self.gateway.new_array(self.gateway.jvm.int, len(lst))
+        for i in range(len(lst)):
+            java_array[i] = lst[i]
+        return self.application.getArrayLength(java_array)
+
+    def getListLength(self, lst):
+        java_list = ListConverter().convert(lst, self.gateway._gateway_client)
+        return self.application.getListLength(java_list)
