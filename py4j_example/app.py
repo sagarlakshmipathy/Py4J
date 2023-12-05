@@ -1,3 +1,4 @@
+import pkg_resources, subprocess, time
 from py4j.java_gateway import JavaGateway
 from py4j.java_collections import ListConverter
 
@@ -16,8 +17,17 @@ class ApplicationWrapper:
 
     """
     def __init__(self):
-        self.gateway = JavaGateway.launch_gateway(jarpath="/path/to/py4j-0.10.9.7.jar",
-                                                  classpath="/path/to/Py4J-1.0-SNAPSHOT.jar")
+        py4j_jar_path = pkg_resources.resource_filename('py4j_example', 'jars/py4j-0.10.9.7.jar')
+        application_jar_path = pkg_resources.resource_filename('py4j_example', 'jars/Py4J-1.0-SNAPSHOT.jar')
+        classpath = f"{py4j_jar_path}:{application_jar_path}"
+
+        # Start the Java Gateway server
+        command = f"java -cp {classpath} py4j.GatewayServer"
+        self.process = subprocess.Popen(command, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+
+        time.sleep(1)
+
+        self.gateway = JavaGateway()
         self.application = self.gateway.jvm.org.example.application.Application()
 
     def add(self, a, b):
@@ -35,3 +45,7 @@ class ApplicationWrapper:
     def getListLength(self, lst):
         java_list = ListConverter().convert(lst, self.gateway._gateway_client)
         return self.application.getListLength(java_list)
+
+    def __del__(self):
+        # Stop the Java Gateway server when the Python object is destroyed
+        self.process.terminate()

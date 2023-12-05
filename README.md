@@ -28,23 +28,25 @@ Once you have Java and Python installed, you can proceed with the following step
     ```python```
 
 
-* Run the below code which will let you use the underlying Java subtract method in python 
+* Run the below code which will let you use the underlying Java subtract method in python
+
 ```python
-from python.app import ApplicationWrapper
+from py4j_example.app import ApplicationWrapper
 
 wrapper = ApplicationWrapper()
-result = wrapper.subtract(2,1)
+result = wrapper.subtract(2, 1)
 
 print(result)  # will output 1
 ```
 
 * In addition to the subtract method, you can access other Java objects and methods (native and custom) from Python. 
 For example, to call a Java method named `getArrayLength` that takes a list of integers as a parameter, you can do the following:
+
 ```python
-from python.app import ApplicationWrapper
+from py4j_example.app import ApplicationWrapper
 
 wrapper = ApplicationWrapper()
-result = wrapper.getArrayLength([1,2,3])
+result = wrapper.getArrayLength([1, 2, 3])
 
 print(result)  # will output 3
 ```

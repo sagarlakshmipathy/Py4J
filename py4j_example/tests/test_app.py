@@ -1,5 +1,5 @@
 # test cases for functions in app.py
-from python.app import ApplicationWrapper
+from py4j_example.app import ApplicationWrapper
 
 
 class TestApp:
