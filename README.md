@@ -9,8 +9,9 @@ This project is a simple implementation of [Py4J](https://www.py4j.org/index.htm
 ## Getting Started
 To get started with Py4J, you will need to have the below in your machine. 
 * Java (Java 11 or above) - This project was tested with **Java 11**
-* Python (Python 2 & 3 will work) - This project was tested with **Python 3.10.11**
-* Maven - This project's build was tested with **Maven 3.9.4**
+* Add JAVA_HOME to your environment variables
+* Python (Python 3.x) - This project was tested with **Python 3.10.11**
+* Optional - Maven (only if you want to build from teh source) - This project's build was tested with **Maven 3.9.4**
 You can find the installation instructions on their respective official websites.
 
 Once you have Java and Python installed, you can proceed with the following steps:
