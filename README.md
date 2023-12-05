@@ -2,16 +2,16 @@
 This project is a simple implementation of [Py4J](https://www.py4j.org/index.html), a Python library that enables Python programs to dynamically access Java objects and methods. The goal of this project is to provide users with a guardrail to implement Py4J in their workflow.
 
 [![Packaging Status](https://github.com/sagarlakshmipathy/Py4J/actions/workflows/python-publish.yml/badge.svg)](https://github.com/sagarlakshmipathy/Py4J/actions/workflows/python-publish.yml)
-[![Generic badge](https://img.shields.io/badge/PyPI-Published-yellow.svg)](https://pypi.org/project/py4j-example/)
-[![Generic badge](https://img.shields.io/badge/release-v0.1.0-green.svg)](https://github.com/sagarlakshmipathy/Py4J/releases/tag/v0.1.0)
-[![Generic badge](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](https://github.com/sagarlakshmipathy/Py4J/blob/main/LICENSE)
+[![PyPi version](https://badgen.net/pypi/v/py4j-example/)](https://pypi.org/project/py4j-example/)
+[![GitHub release](https://badgen.net/github/release/sagarlakshmipathy/Py4J)](https://github.com/sagarlakshmipathy/Py4J/releases/)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/sagarlakshmipathy/Py4J/blob/main/LICENSE)
 
 ## Getting Started
 To get started with Py4J, you will need to have the below in your machine. 
 * Java (Java 11 or above) - This project was tested with **Java 11**
-* Add JAVA_HOME to your environment variables
+* Add **JAVA_HOME** to your environment variables
 * Python (Python 3.x) - This project was tested with **Python 3.10.11**
-* Optional - Maven (only if you want to build from teh source) - This project's build was tested with **Maven 3.9.4**
+* Optional - Maven (only if you want to build from source) - This project's build was tested with **Maven 3.9.4**
 You can find the installation instructions on their respective official websites.
 
 Once you have Java and Python installed, you can proceed with the following steps:
