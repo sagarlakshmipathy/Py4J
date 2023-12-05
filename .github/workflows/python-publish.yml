@@ -25,11 +25,12 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
-      - name: Download py4j jar
         run: |
-          mkdir -p py4j_example
-          curl -L -o py4j_example/py4j-0.10.9.7.jar https://repo1.maven.org/maven2/net/sf/py4j/py4j/0.10.9.7/py4j-0.10.9.7.jar
+          mvn clean package
+          mkdir -p py4j_example/jars
+          cp target/Py4J-1.0-SNAPSHOT.jar py4j_example/jars/
+      - name: Download py4j jar
+        run: curl -L -o py4j_example/jars/py4j-0.10.9.7.jar https://repo1.maven.org/maven2/net/sf/py4j/py4j/0.10.9.7/py4j-0.10.9.7.jar
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

@@ -17,8 +17,8 @@ class ApplicationWrapper:
 
     """
     def __init__(self):
-        py4j_jar_path = pkg_resources.resource_filename('py4j_example', 'py4j-0.10.9.7.jar')
-        application_jar_path = pkg_resources.resource_filename('py4j_example', 'Py4J-1.0-SNAPSHOT.jar')
+        py4j_jar_path = pkg_resources.resource_filename('py4j_example', 'jars/py4j-0.10.9.7.jar')
+        application_jar_path = pkg_resources.resource_filename('py4j_example', 'jars/Py4J-1.0-SNAPSHOT.jar')
         classpath = f"{py4j_jar_path}:{application_jar_path}"
 
         # Start the Java Gateway server

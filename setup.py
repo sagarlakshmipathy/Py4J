@@ -19,7 +19,7 @@ setup(
     name="py4j-example",
     version=VERSION,
     packages=find_packages(),
-    package_data={"py4j_example": ["*.jar"]},  # Include JAR files in the package
+    package_data={"py4j_example": ["jars/*.jar"]},  # Include JAR files in the package
     include_package_data=True,
     long_description=long_description,
     long_description_content_type="text/markdown",
