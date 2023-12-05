@@ -18,7 +18,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="py4j-example",
     version=VERSION,
-    packages=find_packages(),
+    packages=find_packages(include=["py4j_example*", "py4j_example.*"]),
     package_data={"py4j_example": ["jars/*.jar"]},  # Include JAR files in the package
     include_package_data=True,
     long_description=long_description,
