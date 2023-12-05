@@ -54,8 +54,8 @@ You can extend the application by adding your own Java classes and methods.
 * Add your custom methods to the class
 * Add unit test cases for the Java methods in the `src/test/java/org/example/` directory
 * Build the project using `mvn clean package`
-* Modify the `pyhton/app.py` file to add your custom methods
-* Add unit tests for your Python methods in the `python/tests/` directory
+* Modify the `py4j_example/app.py` file to add your custom methods
+* Add unit tests for your Python methods in the `py4j_example/tests/` directory
 * Run the tests using `python -m pytest` from the project root directory
 
 ## Contributing
